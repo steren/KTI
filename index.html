@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="MobileOptimized" content="640"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<title>KTI</title>
+		<style>
+		  body {
+				font-family: arial;
+				margin: 0;
+				padding: none;
+				background-color: #555555;
+				color: white;
+		  }
+
+			/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+		  .render { 
+				border: 0px none; 
+				background-color: black;
+				
+				padding-right: 0;
+				margin-left: auto; 
+				margin-right: auto; 
+				display: block;
+			}
+	
+		</style>
+	</head>
+
+	<body>
+		<canvas class="render" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+		<p id="status">Downloading...</p>
+
+		<form>
+			<label for="zip">Select game data as local .zip file:</label><br>
+			<input type=file name="zip" id="zip" /><br>
+			<input type="button" id="start" value="Launch" />
+		</form>
+
+		<script type='text/javascript' src='hl-engine-js/browserfs.min.js'></script>
+		<script type='text/javascript' src='hl-engine-js/lib/hl-engine.js'></script>
+		<script type='text/javascript' src='index.js'></script>
+	</body>
+</html>
