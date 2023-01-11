@@ -33,13 +33,7 @@
 	<body>
 		<canvas class="render" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
 
-		<p id="status">Downloading...</p>
-
-		<form>
-			<label for="zip">Select game data as local .zip file:</label><br>
-			<input type=file name="zip" id="zip" /><br>
-			<input type="button" id="start" value="Launch" />
-		</form>
+		<input type="button" id="start" value="Launch" disabled/>
 
 		<script type='text/javascript' src='hl-engine-js/browserfs.min.js'></script>
 		<script type='text/javascript' src='hl-engine-js/lib/hl-engine.js'></script>
