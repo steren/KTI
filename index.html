@@ -17,11 +17,13 @@
 		  }
 
 			/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-		  .render { 
+			#canvas {
 				border: 0px none; 
 				background-color: black;
-				
 				padding-right: 0;
+			}
+
+		  #canvas, #start { 
 				margin-left: auto; 
 				margin-right: auto; 
 				display: block;
