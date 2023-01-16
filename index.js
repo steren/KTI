@@ -1,6 +1,8 @@
+import {init, start, fullscreen} from './hl-engine-js/lib/hl-engine.js';
+
 let zipArrayBuffer;
 
-HLEngine.init({
+init({
   canvas: document.getElementById('canvas'),
   location: 'hl-engine-js/lib'
 });
@@ -14,11 +16,10 @@ fetch("KTI.zip")
   });
 
 document.getElementById('start').onclick = function() {
-  HLEngine.start({
+  start({
     zip: zipArrayBuffer,
-    game: "KTI",
+    mod: "KTI",
     map: "kti1",
-    filesystem: "RAM",
     fullscreen: true,
   });
 };
